@@ -41,7 +41,7 @@
         </button>
       </form>
     </template>
-    <div class="loggedIn-container container">
+    <div class="loggedIn-container container" v-else>
       <h5 class="greenish-blue-text">Estás logeado</h5>
       <code>{{ bearerToken }}</code>
     </div>
@@ -63,7 +63,7 @@ export default {
       password: "",
       errorEmail: false,
       errorPass: false,
-      loggedIn: true,
+      loggedIn: false,
     };
   },
   computed: {
